@@ -23,9 +23,9 @@ jobs:
         run: |
           wget https://elasticbeanstalk-us-east-1-734046833946.s3.amazonaws.com/gha-add-rows.py
           chmod +x gha-add-rows.py
-      - uses: gradle/actions/setup-gradle@v3
-          with:
-            gradle-version: '8.5'
+      - uses: gradle/gradle-build-action@v2
+        with:
+          gradle-version: "8.5"
       - name: Install C dependencies
         run: |
           sudo apt update
